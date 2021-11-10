@@ -38,6 +38,15 @@ export const NEW_USER = gql`
 			user {
 				username
 				email
+        bookCount
+        savedBooks {
+          authors
+          bookId
+          image
+          link
+          title
+          description
+        }
 			}
 			token
 		}

@@ -24,7 +24,7 @@ const SavedBooks = () => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
     console.log( "Token", token);
     if (!token) {
-      console.log("profile data:", userData);
+
       return false;
     }
 
@@ -53,8 +53,8 @@ const SavedBooks = () => {
       </Jumbotron>
       <Container>
         <h2>
-          { userData.user.savedBooks.length
-            ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
+          {userData && userData.user.savedBooks.length
+            ? `Viewing ${userData.user.savedBooks.length} saved ${userData.user.savedBooks.length === 1 ? 'book' : 'books'}:`
             : 'You have no saved books!'}
         </h2>
         <CardColumns>
