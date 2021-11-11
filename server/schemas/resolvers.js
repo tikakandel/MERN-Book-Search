@@ -7,10 +7,8 @@ const resolvers = {
     Query: {
         user: async (parent, args, context) => {
             if (context.user) {
-                console.log(context.user);
               const userProfile = await User.findOne({ _id: context.user._id })
-            
-              return userProfile;
+               return userProfile;
             }
             throw new AuthenticationError("Not logged in");
           },
@@ -21,7 +19,6 @@ const resolvers = {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
-          
             return {token, user};
         },
 

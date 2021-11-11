@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const GET_PROFILE = gql`
+export const GET_PROFILE= gql`
 {
     user {
       _id
@@ -8,6 +8,7 @@ export const GET_PROFILE = gql`
       email
       bookCount
       savedBooks {
+        _id
         bookId
         authors
         image
