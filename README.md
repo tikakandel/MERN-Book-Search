@@ -15,7 +15,7 @@ https://tika-booksearch.herokuapp.com
 
  
 ## How to run
-    Please cllone the repo and run npm install and npm run dev to run the app.
+    Please clone the repo and run npm install and npm run dev to run the app.
     
 ## Contribution
     Pull requests are always welcome!
